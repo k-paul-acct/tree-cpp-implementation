@@ -8,8 +8,10 @@ namespace tree
 {
 	class BinaryTree
 	{
-	private:
-		TreeNode* _Root;
+	protected:
+		TreeNode* _Root = nullptr;
+
+		BinaryTree();
 
 	public:
 		BinaryTree(TreeNode* root);
@@ -24,5 +26,16 @@ namespace tree
 		void PostorderTraversalPrint();
 
 		void Print();
+	};
+
+	class BsTree : public BinaryTree
+	{
+	public:
+		BsTree();
+		BsTree(int rootValue);
+		~BsTree();
+
+		void AddElement(int element);
+		bool Exists(int element);
 	};
 }
