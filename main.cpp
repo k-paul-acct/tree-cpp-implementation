@@ -7,6 +7,7 @@
 
 int main()
 {
+	// Binary tree usage example in general.
 	auto root =
 		new TreeNode(3,
 			new TreeNode(2,
@@ -32,7 +33,7 @@ int main()
 	tree->PreorderTraversalPrint();
 	std::cout << std::endl << std::endl;
 
-
+	// Binary search tree usage example.
 	auto bsTree = new tree::BsTree(9);
 	bsTree->AddElement(7);
 	bsTree->AddElement(12);
@@ -48,12 +49,19 @@ int main()
 	std::cout << "Binary search tree example:" << std::endl;
 	bsTree->Print();
 
+	std::cout << "inorder traversal: ";
+	bsTree->InorderTraversalPrint();
+	std::cout << std::endl << std::endl;
 
+	// Memory release.
 	tree->~BinaryTree();
 	bsTree->~BsTree();
 
+	// Leaks info.
 	std::cout << "memory leaks found: " << _CrtDumpMemoryLeaks() << std::endl;
 
+	// Waiting for input to close the terminal.
 	std::cin.get();
+
 	return 0;
 }

@@ -151,6 +151,6 @@ namespace tree
 
 	bool BsTree::Exists(int element)
 	{
-
+		return 0;
 	}
 }
