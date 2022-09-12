@@ -44,14 +44,26 @@ int main()
 	bsTree->AddElement(21);
 	bsTree->AddElement(-12);
 	bsTree->AddElement(-3);
-	bsTree->AddElement(0);
+	bsTree->AddElement(15);
+	bsTree->AddElement(14);
+	bsTree->AddElement(16);
+	bsTree->AddElement(20);
 
 	std::cout << "Binary search tree example:" << std::endl;
 	bsTree->Print();
 
 	std::cout << "inorder traversal: ";
 	bsTree->InorderTraversalPrint();
-	std::cout << std::endl << std::endl;
+	std::cout << std::endl;
+
+	bsTree->DeleteElement(19);
+
+	std::cout << "Binary search tree delete element example:" << std::endl;
+	bsTree->Print();
+
+	std::cout << "inorder traversal after deleting: ";
+	bsTree->InorderTraversalPrint();
+	std::cout << std::endl;
 
 	// Memory release.
 	tree->~BinaryTree();

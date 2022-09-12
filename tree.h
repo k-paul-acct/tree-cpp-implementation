@@ -36,6 +36,7 @@ namespace tree
 		~BsTree();
 
 		void AddElement(int element);
+		void DeleteElement(int element);
 		bool Exists(int element);
 	};
 }
